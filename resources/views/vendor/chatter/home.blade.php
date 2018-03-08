@@ -19,16 +19,17 @@
 
 <div id="chatter" class="chatter_home">
 
-	<div id="chatter_hero">
-		<div id="chatter_hero_dimmer"></div>
-		<?php $headline_logo = Config::get('chatter.headline_logo'); ?>
-		@if( isset( $headline_logo ) && !empty( $headline_logo ) )
-			<img src="{{ Config::get('chatter.headline_logo') }}">
-		@else
-			<h1>@lang('chatter::intro.headline')</h1>
-			<p>@lang('chatter::intro.description')</p>
-		@endif
-	</div>
+	<section class="jumbotron" style="background-color:#007cad;">
+		<div class="jumbotron_body">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+						<h1>Foro de Digital Asistido</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	@if(config('chatter.errors'))
 		@if(Session::has('chatter_alert'))

@@ -1,0 +1,136 @@
+/* COLORES */
+
+/*
+AZUL
+color: #007cad;
+hover
+color: #005980;
+
+VERDE
+color: #04843b;
+hover
+color: #02622c;
+
+
+*/
+
+
+*{
+	font-family: roboto;
+	font-size: 14px;
+}
+
+
+/* NAVBAR */
+
+.navbar-default {
+    position: relative;
+    background-color: #fff;
+    border: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    margin: 0;
+    z-index: 9;
+}
+.navbar {
+    min-height: 72px;
+}
+
+.navbar-brand {
+    height: 72px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 2.6;
+}
+
+.navbar .navbar-brand img {
+    float: left;
+    width: 100%;
+}
+
+.navbar-brand>img {
+    display: block;
+}
+
+.navbar-nav .btn{
+    padding: 12px 15px;
+}
+
+/* JUMBOTRON */
+
+.jumbotron .jumbotron_body {
+    position: relative;
+    z-index: 2;
+}
+
+.jumbotron .jumbotron_body h1, 
+.jumbotron .jumbotron_body .h1 {
+    font-size: 46px;
+}
+
+.jumbotron .jumbotron_body h1, 
+.jumbotron .jumbotron_body h2, 
+.jumbotron .jumbotron_body h3, 
+.jumbotron .jumbotron_body h4, 
+.jumbotron .jumbotron_body h5, 
+.jumbotron .jumbotron_body h6 {
+    color: #fff;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    font-weight: 700;
+    margin-top: 0;
+    text-transform: none;
+}
+
+
+
+
+/* BOTONES */
+
+.btn{
+	font-size: 16px;
+    font-weight: 500;
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    line-height: 1.42857143;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.btn .fa {
+    font-size: 1.2em;
+}
+
+.btn-success {
+    background-color: #04843b;
+    border-color: #04843b;
+    color: #fff;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+    background-color: #02622c;
+    border-color: #02622c;
+}
+
+
+#chatter button.btn.btn-primary {
+    color: #007cad;
+}
+
+#chatter button.btn.btn-primary:hover,
+#chatter button.btn.btn-primary:focus{
+    color: #005980;
+}
+
+a {
+    color: #007cad;
+}
+
+a:hover,
+a:focus {
+    color: #005980;
+}
