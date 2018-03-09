@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Argob\MiArgentina\User;
+use App\User;
 use App\Role;
 
 class UsersController extends Controller

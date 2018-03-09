@@ -18,7 +18,7 @@ class CheckPermission
         $user = $request->user();
         
         if(is_null($user)) {
-            return redirect()->route('loginId');
+            return redirect()->route('id.login');
         }
     
         if(!$user->hasRole('sudo') && !$user->hasPermission($permission)) {
