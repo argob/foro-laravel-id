@@ -47,6 +47,7 @@ color: #02622c;
 .navbar .navbar-brand img {
     float: left;
     width: 100%;
+    margin-top: 10px;
 }
 
 .navbar-brand>img {
@@ -133,4 +134,10 @@ a {
 a:hover,
 a:focus {
     color: #005980;
+}
+
+/* CATEGORIAS */
+
+.nav-stacked > li + li {
+    width: 100%;
 }
