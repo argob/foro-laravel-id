@@ -20,6 +20,8 @@
 
 @section('content')
 
+	<?php \Carbon\Carbon::setLocale('es'); ?>
+
 <div id="chatter" class="discussion">
 
 	<div id="chatter_header" style="background-color:{{ $discussion->color }}">

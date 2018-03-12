@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function() {
-    return redirect('/forums');
+    return redirect('/foro');
 });
 
 Auth::routes();

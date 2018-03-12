@@ -16,6 +16,7 @@
 @stop
 
 @section('content')
+    <?php \Carbon\Carbon::setLocale('es'); ?>
 
 <div id="chatter" class="chatter_home">
 

@@ -13,9 +13,9 @@ return [
     */
 
     'routes' => [
-        'home'       => 'forums',
-        'discussion' => 'discussion',
-        'category'   => 'category',
+        'home'       => 'foro',
+        'discussion' => 'discusion',
+        'category'   => 'categoria',
         'post'       => 'posts',
         'register'   => 'register',
         'login'      => 'login',
