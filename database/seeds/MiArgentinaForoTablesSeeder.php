@@ -228,6 +228,16 @@ class MiArgentinaForoTablesSeeder extends Seeder
                 'created_at' => null,
                 'updated_at' => null,
             ],
+            [
+                'id'         => null,
+                'parent_id'  => null,
+                'order'      => 9,
+                'name'       => 'Anuncios',
+                'color'      => '#5bc0de',
+                'slug'       => 'anuncios',
+                'created_at' => null,
+                'updated_at' => null,
+            ],
         ]);
     }
 }
