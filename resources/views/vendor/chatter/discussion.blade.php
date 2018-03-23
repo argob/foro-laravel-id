@@ -107,7 +107,7 @@
 					        				<?php $db_field = Config::get('chatter.user.avatar_image_database_field'); ?>
 
 					        				<!-- If the user db field contains http:// or https:// we don't need to use the relative path to the image assets -->
-					        				@if( (substr($post->user->{$db_field}, 0, 7) == 'http://') || (substr($post->user->{$db_field}, 0, 8) == 'https://') )
+					        				@if( (mb_substr($post->user->{$db_field}, 0, 7) == 'http://') || (mb_substr($post->user->{$db_field}, 0, 8) == 'https://') )
 					        					<img src="{{ $post->user->{$db_field}  }}">
 					        				@else
 					        					<img src="{{ Config::get('chatter.user.relative_url_to_image_assets') . $post->user->{$db_field}  }}">
@@ -115,7 +115,7 @@
 
 					        			@else
 					        				<span class="chatter_avatar_circle" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode($post->user->{Config::get('chatter.user.database_field_with_user_name')}) ?>">
-					        					{{ ucfirst(substr($post->user->{Config::get('chatter.user.database_field_with_user_name')}, 0, 1)) }}
+					        					{{ ucfirst(mb_substr($post->user->{Config::get('chatter.user.database_field_with_user_name')}, 0, 1)) }}
 					        				</span>
 					        			@endif
 					        		</div>
@@ -156,7 +156,7 @@
 		        				<?php $db_field = Config::get('chatter.user.avatar_image_database_field'); ?>
 
 		        				<!-- If the user db field contains http:// or https:// we don't need to use the relative path to the image assets -->
-		        				@if( (substr(Auth::user()->{$db_field}, 0, 7) == 'http://') || (substr(Auth::user()->{$db_field}, 0, 8) == 'https://') )
+		        				@if( (mb_substr(Auth::user()->{$db_field}, 0, 7) == 'http://') || (mb_substr(Auth::user()->{$db_field}, 0, 8) == 'https://') )
 		        					<img src="{{ Auth::user()->{$db_field}  }}">
 		        				@else
 		        					<img src="{{ Config::get('chatter.user.relative_url_to_image_assets') . Auth::user()->{$db_field}  }}">
@@ -164,7 +164,7 @@
 
 		        			@else
 		        				<span class="chatter_avatar_circle" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode(Auth::user()->{Config::get('chatter.user.database_field_with_user_name')}) ?>">
-		        					{{ strtoupper(substr(Auth::user()->{Config::get('chatter.user.database_field_with_user_name')}, 0, 1)) }}
+		        					{{ strtoupper(mb_substr(Auth::user()->{Config::get('chatter.user.database_field_with_user_name')}, 0, 1)) }}
 		        				</span>
 		        			@endif
 		        		</div>

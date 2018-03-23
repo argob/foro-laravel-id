@@ -83,7 +83,7 @@
 					        				<?php $db_field = Config::get('chatter.user.avatar_image_database_field'); ?>
 
 					        				<!-- If the user db field contains http:// or https:// we don't need to use the relative path to the image assets -->
-					        				@if( (substr($discussion->user->{$db_field}, 0, 7) == 'http://') || (substr($discussion->user->{$db_field}, 0, 8) == 'https://') )
+					        				@if( (mb_substr($discussion->user->{$db_field}, 0, 7) == 'http://') || (mb_substr($discussion->user->{$db_field}, 0, 8) == 'https://') )
 					        					<img src="{{ $discussion->user->{$db_field}  }}">
 					        				@else
 					        					<img src="{{ Config::get('chatter.user.relative_url_to_image_assets') . $discussion->user->{$db_field}  }}">
@@ -92,7 +92,7 @@
 					        			@else
 
 					        				<span class="chatter_avatar_circle" style="background-color:#<?= \DevDojo\Chatter\Helpers\ChatterHelper::stringToColorCode($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) ?>">
-					        					{{ strtoupper(substr($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}, 0, 1)) }}
+					        					{{ strtoupper(mb_substr($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}, 0, 1)) }}
 					        				</span>
 
 					        			@endif
@@ -106,7 +106,7 @@
 					        			@else
 					        				<?php $discussion_body = $discussion->post[0]->body; ?>
 					        			@endif
-					        			<p>{{ substr(strip_tags($discussion_body), 0, 200) }}@if(strlen(strip_tags($discussion_body)) > 200){{ '...' }}@endif</p>
+					        			<p>{{ mb_substr(strip_tags($discussion_body), 0, 200) }}@if(strlen(strip_tags($discussion_body)) > 200){{ '...' }}@endif</p>
 					        		</div>
 
 					        		<div class="chatter_right">
