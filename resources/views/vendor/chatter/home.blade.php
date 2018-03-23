@@ -25,7 +25,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-						<h1>Foro de Digital Asistido</h1>
+						<h1>Comunidad de Atención al Ciudadano</h1>
 					</div>
 				</div>
 			</div>
